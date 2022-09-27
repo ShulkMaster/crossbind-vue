@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Crossbind_Vue.Component;
+using Crossbind_Vue.Imports;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,10 +17,10 @@ public class VueComponentWriter
         _sb = sb;
     }
 
-    public void WriteSourceCode()
+    public void WriteSourceCode(VueModule module)
     {
         WriteTemplateSection();
-        WriteScriptSection();
+        WriteScriptSection(module);
         WriteStyleSection();
     }
 
@@ -30,10 +32,11 @@ public class VueComponentWriter
         _sb.AppendLine("</template>");
     }
 
-    private void WriteScriptSection()
+    private void WriteScriptSection(VueModule module)
     {
         _sb.AppendLine("<script>");
         // TODO: Fill all the vue component config such as props, component name HERE
+        WriteImports(module.DefaultImports);
         _sb.AppendLine("</script>");
     }
 
@@ -44,5 +47,27 @@ public class VueComponentWriter
         _sb.AppendLine("</style");
     }
     #endregion
+
+    private void WriteImports(IEnumerable<DefaultImport> imports)
+    {
+        foreach (DefaultImport import in imports)
+        {
+            _sb.Append($"import {import.ModuleName}");
+
+            /*if (import.Symbols.Any())
+            {
+                _sb.Append(", {");
+                foreach (string symbol in import.Symbols)
+                {
+                    _sb.Append($" {symbol},");
+                }
+
+                _sb.Pop();
+                _sb.Append('}');
+            }*/
+
+            _sb.AppendLine($" from '{import.ModulePath}';");
+        }
+    }
 }
 
