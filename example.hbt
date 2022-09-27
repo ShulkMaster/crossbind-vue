@@ -1,0 +1,136 @@
+from 'mylib.hbt' import { flex, paddingM  };
+
+.flex {
+}
+
+.flux .hahs .hioh {
+  
+}
+
+const paddingM = 3em;
+//////////////
+
+component Button extends component {
+    padding: 0;
+    width: 10em;
+    prop text: string;
+
+    variant mode;
+    //prop mode;
+    
+    prop clients: []User;
+    
+    /*
+    const mode = prop.mode ( primary | secondary );
+    */
+    
+    mode primary {
+      border: 2 solid #DDD;
+      backgroundColor: #FFB;
+    }
+        
+    mode secondary  {
+      backgroundColor : #0AA;
+    }
+    
+    variant isJumbo;
+    // prop isJumbo?: bool;
+    
+    isJumbo true {
+     width: 20em;
+    }
+    
+    isJumbo false { -isJumbo-false
+      width: 12em;
+    }
+    
+    isJumbo memame { usJumbo-memame
+     // boolean | 'memame'
+    }
+    
+    isJumbo 3 { -> isJumbo-3
+     // boolean | 'memame' | 3;
+    sdfnsk
+    }
+    
+    .hbs
+    {
+       
+    }
+    
+    let | const [dfsknd]: fskf = valor;
+    
+    
+    !isJumbo == undefined {
+    /**/
+    }
+    //
+    variant nChild;
+    // nChild: number;
+    nChild = 1 {
+        /**/
+    }
+    
+    
+    prop [avatarUrl]: string;
+    
+    prop isDisabled?: bool;
+   
+   .myClass {
+    /*/
+    marginBotton  />
+    margin-botton />
+   }
+
+   prop onClickEvt: funn;
+    
+    mode.secondary {
+      border: 1 solid #333;
+      backgroundColor : #F0F0F0;
+    }
+    
+    const Checkbox = (
+        <div class[flex] clr><p>p<>>
+    )
+
+    const myFunc = (clients) => {
+        event.pre
+        eve.PreventDefalt()
+        onClickEvt();
+    }
+
+    event userLoad(user: User); //>
+    
+    
+    <div id="" class[flex, nChild, myClass] on:click[myFunc]>
+        <button class{}  diabled={isDisabled}>
+            {text} "text"            <span>
+        </button>
+        <switch hdjasd>
+            <case "djfb" on>
+        </switch>
+        <for i , nefd>
+        </for>
+        { client.name.startWith("d") ? bloakA : blockB}
+        <foreach client in clients>
+            <if >
+              <checkbox on:hoover[myFunc(client)]> //> onclick={(evt) => myFunc(evt, client)}
+            </if>
+            <else>
+              <rdio></rdio>
+            </else>
+        </foreach>
+
+        
+        <div [foreach client in clients]>
+          {Shuiw()}
+          <checkbox if="client.name.starttWEUI()"></checkbox>
+          <radio-button else></radio-button>
+        </div>    
+        </foreach>
+    </div>
+    <p class[mode] >
+        <XheckBoz>
+        spav
+    </p>
+}
